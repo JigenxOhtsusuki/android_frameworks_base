@@ -114,4 +114,14 @@ public class ClockController implements TunerService.Tunable {
             mActiveClock.onDensityOrFontScaleChanged();
         }
     }
+
+    public void removeTunable() {
+        mTunerService.removeTunable(this);
+    }
+
+    public void onDensityOrFontScaleChanged() {
+        if (mActiveClock != null) {
+            mActiveClock.onDensityOrFontScaleChanged();
+        }
+    }
 }
