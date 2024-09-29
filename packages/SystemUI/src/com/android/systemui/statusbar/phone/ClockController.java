@@ -42,6 +42,8 @@ public class ClockController implements TunerService.Tunable {
     private Context mContext;
     private Clock mActiveClock, mCenterClock, mLeftClock, mRightClock;
 
+    private final TunerService mTunerService;
+    
     private int mClockPosition = CLOCK_POSITION_LEFT;
 
     public ClockController(Context context, View statusBar) {
